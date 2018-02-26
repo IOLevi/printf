@@ -3,12 +3,12 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
-void _printchar(va_list);
-void _printstring(va_list);
+#include <unistd.h>
+int _printchar(va_list, char *, int);
+int _printstring(va_list, char *, int);
 int _printf(const char *format, ...);
-void _printint(va_list);
 typedef struct{
 	char *c;
-	void (*f)(va_list);
+	int (*f)(va_list, char *,int);
 } Match;
 #endif
