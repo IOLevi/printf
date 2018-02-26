@@ -6,6 +6,7 @@
 #include <unistd.h>
 int _printchar(va_list, char *, int);
 int _printstring(va_list, char *, int);
+int _printdecimal(va_list, char *, int);
 int _printf(const char *format, ...);
 typedef struct{
 	char *c;

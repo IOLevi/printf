@@ -15,6 +15,8 @@ int _printf(const char *format, ...)
 	Match match[] = {
 		{"c", _printchar},
 		{"s", _printstring},
+		{"d", _printdecimal},
+		{"i", _printdecimal},
 		{NULL, NULL}
 		//add some stuff here for decimals
 	};
