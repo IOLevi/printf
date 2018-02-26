@@ -19,6 +19,7 @@ Once cloned over, the repository will contain the following files:
 |---------------|---------------------------------------|
 | printf.c | file containing _printf function and related helper functions |
 | holberton.h | header file containing function prototypes and typedef for struct |
+| helperprint.c | auxilliary file containing helper functions for printf |
 | man_3_printf | formatted man page for _printf function |
 | README.md | README document for process functionality |
 
