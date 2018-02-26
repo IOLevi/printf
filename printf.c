@@ -9,27 +9,16 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	va_start(args, format);
-	int i = 0;
-	int x = 0;
+	int i = 0, x = 0, c = 0;
 	char buffer[1024];
-	Match match[] = {
-		{"c", _printchar},
-		{"s", _printstring},
-		{"d", _printdecimal},
-		{"i", _printdecimal},
-		{NULL, NULL}
-		//add some stuff here for decimals
-	};
+	Match *match = matchinit();	
 	char b;
-	int c = 0; /* len buffer offset count*/
 
 	for (i = 0; format[i] != 0; i++) //format loop
 	{
-		x = 0;
-		
 		if (format[i] == '%')
 		{
-			while (match[x].f != NULL) //looping through match array
+			for (x = 0; match[x].f != NULL; x++)
 			{
 				if (format[i + 1] == *match[x].c)
 				{
@@ -39,22 +28,19 @@ int _printf(const char *format, ...)
 				}
 				else if (format[i + 1] == '%')
 				{
-					b = format[i + 1];
-					buffer[c] = b;
-					c++;
-					i++;
+					buffer[c++] = format[i++ + 1];
+					break;
 				}
-				x++;
 			}
 		}
 		else
 		{
-			b = format[i];
-			buffer[c] = b; 	
-			c++;
+			buffer[c++] = format[i]; 	
 		}
 		
 	}
 	write(1, buffer, c);
+	va_end(args);
+	free(match);
 	return (c);
 }

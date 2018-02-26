@@ -12,4 +12,5 @@ typedef struct{
 	char *c;
 	int (*f)(va_list, char *,int);
 } Match;
+Match *matchinit(void);
 #endif
