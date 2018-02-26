@@ -35,6 +35,13 @@ int _printf(const char *format, ...)
 					i++; //skip over the next one
 					break;
 				}
+				else if (format[i + 1] == '%')
+				{
+					b = format[i + 1];
+					buffer[c] = b;
+					c++;
+					i++;
+				}
 				x++;
 			}
 		}
