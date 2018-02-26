@@ -30,6 +30,7 @@ There are no known bugs at the time.
 
 ### Author
 *Amy Galles* - [Github](https://github.com/AmyLGalles) || [Twitter](https://twitter.com/AmyLGalles) || [email](273@holbertonschool.com)
+
 *Evan Sznol* - [Github](https://github.com/IOLevi)
 
 #### Feedback and contributors welcomed.
