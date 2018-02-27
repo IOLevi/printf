@@ -31,6 +31,7 @@ int _printstring(va_list args, char *buffer, int offset)
 	int i = 0, j = 0;
 
 	s = va_arg(args, char *);
+
 	while (s[i] != 0)
 		i++;
 	for (j = 0; j < i; j++)
@@ -48,31 +49,38 @@ int _printstring(va_list args, char *buffer, int offset)
  */
 int _printdecimal(va_list args, char *buffer, int offset)
 {
-	int i;
-	int x = 0;
-	int isnegative = 0;
+	int j;
+	unsigned int i;
+	unsigned int x = 0;
+	unsigned int isnegative = 0;
 	char itoa[1024];
-	int remainder = 0;
-	int temp;
-	int base = 10;
+	unsigned int remainder = 0;
+	unsigned int temp;
+	unsigned int base = 10;
 
-	i = va_arg(args, int);
-	if (i == 0)
+	j = va_arg(args, int);
+	if (j == 0)
 	{
 		buffer[offset] = '0';
 		return (1);
 	}
-	if (i < 0 && base == 10)
+
+	if (j < 0 && base == 10)
 	{
 		isnegative = 1;
-		i *= -1;
+		i = j * -1;
 	}
+	else 
+		i = j;
+
+
 	while (i != 0)
 	{
 		remainder = i % base;
 		itoa[x++] = (remainder > 9) ? (remainder - 10) + 'a' : remainder + '0';
 		i /= base;
 	}
+
 	if (isnegative)
 	{
 		itoa[x++] = '-';
