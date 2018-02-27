@@ -12,7 +12,6 @@ int _printf(const char *format, ...)
 	int i = 0, x = 0, c = 0;
 	char buffer[1024];
 	Match *match = matchinit();	
-	char b;
 
 	for (i = 0; format[i] != 0; i++) //format loop
 	{
