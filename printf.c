@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	va_list args;
 	int i = 0, x = 0, c = 0;
 	char buffer[1024];
-	Match match[9];
+	Match match[15];
 
 	va_start(args, format);
 	matchinit(match);

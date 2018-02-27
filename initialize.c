@@ -21,6 +21,12 @@ void matchinit(Match *match)
 	match[6].f = _unsignedint;
 	match[7].c = "o";
 	match[7].f = _octal;
-	match[8].c = NULL;
-	match[8].f = NULL;
+
+	match[8].c = "x";
+	match[8].f = _hexlower;
+
+	match[9].c = "X";
+	match[9].f = _hexupper;
+	match[10].c = NULL;
+	match[10].f = NULL;
 }
