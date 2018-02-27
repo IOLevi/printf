@@ -32,6 +32,7 @@ int _printf(const char *format, ...)
 					break;
 				}
 			}
+			return (-1);
 		}
 		else
 		{
