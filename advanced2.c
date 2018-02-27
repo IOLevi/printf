@@ -43,38 +43,38 @@ int _reverse(va_list args, char *buffer, int offset)
 int _rot13(va_list args, char *buffer, int offset)
 {
 
-  int j = 0, i = 0, y = 0;
+	int j = 0, i = 0, y = 0;
 
-  char s1[] = {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
-  char s2[] = {"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"};
-  char *t;
-  char s[1024];
+	char s1[] = {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
+	char s2[] = {"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"};
+	char *t;
+	char s[1024];
 
-  t = va_arg(args, char *);
+	t = va_arg(args, char *);
 
-  while (t[i] != 0)
-    i++;
+	while (t[i] != 0)
+		i++;
 
-  for (j = 0; j < i; j++)
-    s[j] = t[j];
+	for (j = 0; j < i; j++)
+		s[j] = t[j];
 
-  for (j = 0; j < i; j++)
-    {
-
-      for (y = 0; s1[y] != '0'; y++)
+	for (j = 0; j < i; j++)
 	{
 
-	  if (s[j] == s1[y])
-	    {
-	      s[j] = s2[y];
-	      break;
-	    }
+		for (y = 0; s1[y] != 0; y++)
+		{
+
+			if (s[j] == s1[y])
+			{
+				s[j] = s2[y];
+				break;
+			}
+
+		}
 
 	}
+	for (j = 0; j < i; j++)
+		buffer[offset + j] = s[j];
 
-    }
-  for (j = 0; j < i; j++)
-  buffer[offset + j] = s[j];
-
-  return (i);
+	return (i);
 }
