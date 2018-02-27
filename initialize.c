@@ -27,6 +27,8 @@ void matchinit(Match *match)
 
 	match[9].c = "X";
 	match[9].f = _hexupper;
-	match[10].c = NULL;
-	match[10].f = NULL;
+	match[10].c = "b";
+	match[10].f = _binary;
+	match[11].c = NULL;
+	match[11].f = NULL;
 }
