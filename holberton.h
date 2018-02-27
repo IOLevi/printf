@@ -9,11 +9,6 @@ int _printchar(va_list, char *, int);
 int _printstring(va_list, char *, int);
 int _printdecimal(va_list, char *, int);
 int _printf(const char *format, ...);
-int _unsignedint(va_list, char *, int);
-int _unsignedoctal(va_list, char *, int);
-int _unsignedhex(va_list, char *, int);
-int _hexupper(va_list, char *, int);
-int _nonprintable(va_list, char *, int);
 
 /**
  * struct Q - matches specifiers with functions

@@ -50,7 +50,7 @@ int _printdecimal(va_list args, char *buffer, int offset)
 {
 	int i;
 	int x = 0;
-	int isnegative;
+	int isnegative = 0;
 	char itoa[1024];
 	int remainder = 0;
 	int temp;
