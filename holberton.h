@@ -1,18 +1,29 @@
-/*needs a definition for the structure*/
-
 #ifndef CESTCOOL
 #define CESTCOOL
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <limits.h>
 int _printchar(va_list, char *, int);
 int _printstring(va_list, char *, int);
 int _printdecimal(va_list, char *, int);
 int _printf(const char *format, ...);
-typedef struct{
+int _unsignedint(va_list, char *, int);
+int _unsignedoctal(va_list, char *, int);
+int _unsignedhex(va_list, char *, int);
+int _hexupper(va_list, char *, int);
+int _nonprintable(va_list, char *, int);
+
+/**
+ * struct Q - matches specifiers with functions
+ * @c: the format specifier
+ * @f: the function
+ */
+typedef struct Q
+{
 	char *c;
 	int (*f)(va_list, char *,int);
 } Match;
-Match *matchinit(void);
+void matchinit(Match *);
 #endif

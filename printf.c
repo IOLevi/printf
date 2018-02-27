@@ -13,7 +13,8 @@ int _printf(const char *format, ...)
 
 	int i = 0, x = 0, c = 0;
 	char buffer[1024];
-	Match *match = matchinit();
+	Match match[9];
+	matchinit(match);
 
 	for (i = 0; format[i] != 0; i++)
 	{
@@ -42,6 +43,5 @@ int _printf(const char *format, ...)
 	}
 	write(1, buffer, c);
 	va_end(args);
-	free(match);
 	return (c);
 }
