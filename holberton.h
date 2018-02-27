@@ -11,6 +11,8 @@ int _printdecimal(va_list, char *, int);
 int _printf(const char *format, ...);
 int _reverse(va_list, char *, int);
 int _rot13(va_list, char *, int);
+int _unsignedint(va_list, char *, int);
+int _octal(va_list, char *, int);
 /**
  * struct Q - matches specifiers with functions
  * @c: the format specifier

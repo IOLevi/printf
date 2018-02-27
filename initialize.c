@@ -17,6 +17,10 @@ void matchinit(Match *match)
 	match[4].f = _reverse;
 	match[5].c = "R";
 	match[5].f = _rot13;
-	match[6].c = NULL;
-	match[6].f = NULL;
+	match[6].c = "u";
+	match[6].f = _unsignedint;
+	match[7].c = "o";
+	match[7].f = _octal;
+	match[8].c = NULL;
+	match[8].f = NULL;
 }
