@@ -8,10 +8,12 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
+
 	va_start(args, format);
+
 	int i = 0, x = 0, c = 0;
 	char buffer[1024];
-	Match *match = matchinit();	
+	Match *match = matchinit();
 
 	for (i = 0; format[i] != 0; i++)
 	{
@@ -34,9 +36,9 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			buffer[c++] = format[i]; 	
+			buffer[c++] = format[i];
 		}
-		
+
 	}
 	write(1, buffer, c);
 	va_end(args);
