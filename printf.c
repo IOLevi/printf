@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 	char buffer[1024];
 	Match *match = matchinit();	
 
-	for (i = 0; format[i] != 0; i++) //format loop
+	for (i = 0; format[i] != 0; i++)
 	{
 		if (format[i] == '%')
 		{
@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 				if (format[i + 1] == *match[x].c)
 				{
 					c += match[x].f(args, buffer, c);
-					i++; //skip over the next one
+					i++;
 					break;
 				}
 				else if (format[i + 1] == '%')

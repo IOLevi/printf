@@ -1,4 +1,10 @@
 #include "holberton.h"
+/* 1. comments for every function
+ * 2. remove all c++ style // comments
+ * 3. space between declarations and code
+ * 4. 40 lines per function
+ * 5. stufffff.
+ */
 int _printchar(va_list args, char *buffer, int offset)
 {
 	char a;

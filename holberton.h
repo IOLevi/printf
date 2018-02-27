@@ -1,3 +1,5 @@
+/*needs a definition for the structure*/
+
 #ifndef CESTCOOL
 #define CESTCOOL
 #include <stdio.h>
