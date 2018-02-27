@@ -8,14 +8,12 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-
-	va_start(args, format);
-
 	int i = 0, x = 0, c = 0;
 	char buffer[1024];
 	Match match[9];
-	matchinit(match);
 
+	va_start(args, format);
+	matchinit(match);
 	for (i = 0; format[i] != 0; i++)
 	{
 		if (format[i] == '%')

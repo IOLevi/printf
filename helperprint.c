@@ -85,4 +85,5 @@ int _printdecimal(va_list args, char *buffer, int offset)
 	}
 	for (i = 0; i < x; i++)
 		buffer[offset + i] = itoa[i];
+	return (x);
 }

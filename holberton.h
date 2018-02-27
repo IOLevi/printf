@@ -23,7 +23,7 @@ int _nonprintable(va_list, char *, int);
 typedef struct Q
 {
 	char *c;
-	int (*f)(va_list, char *,int);
+	int (*f)(va_list, char *, int);
 } Match;
 void matchinit(Match *);
 #endif

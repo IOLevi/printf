@@ -1,5 +1,8 @@
 #include "holberton.h"
-
+/**
+ * matchinit - initializes our matching structure
+ * @match: match array
+ */
 void matchinit(Match *match)
 {
 	match[0].c = "c";
