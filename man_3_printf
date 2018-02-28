@@ -6,6 +6,21 @@
 
 int _printf(const char *format, ...)
 .I FORMAT [ARGUMENT]...
+Available conversion specifiers:
+
+%c - character %s - string 
+%d - signed decimal integer 
+%i - signed decimal integer 
+%b - integer in binary 
+%u - unsigned int in decimal
+%o unsigned int in octal
+%x - unsigned int as a hexadecimal number using lower-case letters
+%X - unsigned int as a hexadecimal number using upper-case letters
+%S - print non-printable characters followed by the upper-case 2-digit ASCII code value in hexadecimal
+%r - prints a string in reverse
+%rot13 - prints a string using rot13 encryption
+
+
 .SH DESCRIPTION
 Print ARGUMENT(s) acording to FORMAT
 .SH SEE ALSO
