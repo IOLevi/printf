@@ -39,6 +39,10 @@ int _printf(const char *format, ...)
 		}
 
 	}
+	if (c == 0)
+	{
+		return (-1);
+	}
 	write(1, buffer, c);
 	va_end(args);
 	return (c);
