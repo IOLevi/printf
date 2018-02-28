@@ -96,7 +96,6 @@ int _binary(va_list args, char *buffer, int offset)
 {
 	unsigned int i, j = 0, k = 0;
 	unsigned int remainder;
-	unsigned int quotient; 
 	unsigned int temp;
 	char s[1024];
 
