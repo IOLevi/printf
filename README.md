@@ -17,9 +17,12 @@ Once cloned over, the repository will contain the following files:
 
 |   **File**    |  **Decription**                       |
 |---------------|---------------------------------------|
-| printf.c | file containing _printf function and related helper functions |
+| printf.c | file containing _printf variadic function, filters for edge cases, runs matchinit function on format argument, writes buffer to standard output and returns the concatenated string length |
 | holberton.h | header file containing function prototypes and typedef for struct |
-| helperprint.c | auxilliary file containing helper functions for printf |
+| initialize.c | contains matchinit function that compares format character string to Match array of functions |
+| helperprint.c | auxilliary file containing helper function definitions for _printchar, _printdecimal, and _printstring |
+| advanced2.c | auxilliary file containing helper function definitions for _reverse, _rot13, _unsignedint, and _octal |
+| advanced3.c | auxilliary file containing helper function definitions for _hexlower, _hexupper, and _hexbinary |
 | man_3_printf | formatted man page for _printf function |
 | README.md | README document for process functionality |
 
