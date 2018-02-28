@@ -32,6 +32,7 @@ int _printf(const char *format, ...)
 					break;
 				}
 			}
+			buffer[c++] = format[i];
 		}
 		else
 		{
