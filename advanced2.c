@@ -5,7 +5,7 @@
  * @args: args
  * @buffer: buffer
  * @offset: offset
- * Return: length of resulting string 
+ * Return: length of resulting string
  */
 int _reverse(va_list args, char *buffer, int offset)
 {
@@ -21,16 +21,17 @@ int _reverse(va_list args, char *buffer, int offset)
 
 	for (j = 0; j < i; j++)
 		s[j] = t[j];
-	
 	for (j = 0; j < i / 2; j++)
 	{
 		temp = s[j];
 		s[j] = s[i - j - 1];
-		s[i - j - 1] = temp;		
+		s[i - j - 1] = temp;
 	}
 
 	for (j = 0; j < i; j++)
-	       buffer[offset + j] = s[j];	
+	{
+		buffer[offset + j] = s[j];
+	}
 	return (i);
 }
 /**
@@ -38,7 +39,7 @@ int _reverse(va_list args, char *buffer, int offset)
  * @args: arguments passed from main
  * @buffer: buffer that will be used to print to standard output
  * @offset: pointer that moves to the end of the last output to buffer
- * Return: length of resulting string 
+ * Return: length of resulting string
  */
 int _rot13(va_list args, char *buffer, int offset)
 {
@@ -100,7 +101,6 @@ int _unsignedint(va_list args, char *buffer, int offset)
 		buffer[offset] = '0';
 		return (1);
 	}
-	
 	while (i != 0)
 	{
 		remainder = i % base;
@@ -141,7 +141,6 @@ int _octal(va_list args, char *buffer, int offset)
 		buffer[offset] = '0';
 		return (1);
 	}
-	
 	while (i != 0)
 	{
 		remainder = i % base;

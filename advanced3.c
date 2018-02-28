@@ -4,6 +4,7 @@
  * @args: args
  * @buffer: buffer
  * @offset: offset
+ * Return: an int
  */
 int _hexlower(va_list args, char *buffer, int offset)
 {
@@ -21,7 +22,6 @@ int _hexlower(va_list args, char *buffer, int offset)
 		buffer[offset] = '0';
 		return (1);
 	}
-	
 	while (i != 0)
 	{
 		remainder = i % base;
@@ -47,6 +47,7 @@ int _hexlower(va_list args, char *buffer, int offset)
  * @args: args
  * @buffer: buffer
  * @offset: offset
+ * Return: an int
  */
 int _hexupper(va_list args, char *buffer, int offset)
 {
@@ -64,7 +65,6 @@ int _hexupper(va_list args, char *buffer, int offset)
 		buffer[offset] = '0';
 		return (1);
 	}
-	
 	while (i != 0)
 	{
 		remainder = i % base;
@@ -100,7 +100,6 @@ int _binary(va_list args, char *buffer, int offset)
 	char s[1024];
 
 	i = (unsigned int)va_arg(args, int);
- 
 	if (i == 0)
 	{
 		buffer[offset] = '0';
@@ -109,22 +108,17 @@ int _binary(va_list args, char *buffer, int offset)
 	}
 	if (i == 1)
 	{
-		
 		buffer[offset] = '1';
 		return (1);
-		
 	}
 	while (i / 2 != 0)
 	{
 		remainder = i % 2;
-		s[j] = remainder + '0';
+		s[j++] = remainder + '0';
 		i /= 2;
-		j++;
-
 	}
-
 	if (i == 1)
-	{		
+	{
 		s[j++] = '1';
 	}
 	for (k = 0; k < j / 2; k++)
@@ -133,9 +127,7 @@ int _binary(va_list args, char *buffer, int offset)
 		s[k] = s[j - k - 1];
 		s[j - k - 1] = temp;
 	}
-
 	for (i = 0; i < j; i++)
 		buffer[offset + i] = s[i];
-
 	return (j);
 }

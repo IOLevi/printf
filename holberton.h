@@ -13,7 +13,7 @@ int _reverse(va_list, char *, int);
 int _rot13(va_list, char *, int);
 int _unsignedint(va_list, char *, int);
 int _octal(va_list, char *, int);
-int _hexlower(va_list, char *, int); 
+int _hexlower(va_list, char *, int);
 int _hexupper(va_list, char *, int);
 int _binary(va_list, char *, int);
 /**
